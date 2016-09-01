@@ -14,8 +14,7 @@
  */
 var pet = "turtle 🐢"
 
-
-
+//String
 
 
 
@@ -25,7 +24,7 @@ var pet = "turtle 🐢"
 var petName: String?
 
 
-
+//Optional String
 
 
 
@@ -33,7 +32,7 @@ var petName: String?
  ### 3. Currently, what is the _value_ of `petName`?
  */
 
-
+//nil
 
 
 
@@ -45,7 +44,9 @@ var petName: String?
 // write your code here
 
 
+petName = "Bruno"
 
+//Optional String
 
 
 
@@ -56,9 +57,9 @@ var petName: String?
 // write your code here
 
 
+print(petName)
 
-
-
+//Optional("Bruno")
 
 
 /*: question6
@@ -68,7 +69,9 @@ var petName: String?
 
 
 
-
+if petName != nil{
+    print("There is no pet name.")
+}
 
 
 
@@ -76,12 +79,9 @@ var petName: String?
  ### 7. Use _optional binding_ to unwrap the value of `petName` and print it to the console without all the **Optional(...)** stuff around it.
  */
 // write your code here
-
-
-
-
-
-
+if let petName = petName{
+    print(petName)
+}
 
 /*: question8
  ### 8. Write an if statement that will print out "The value of anotherPetName is nil" using the variable below
@@ -89,18 +89,23 @@ var petName: String?
 var anotherPetName: String?
 // write your code here
 
-
-
-
-
+if anotherPetName == nil{
+    print("The value of anotherPetName is nil")
+}
 
 
 /*: question9
  ### 9. Using optional binding, write an if statement that prints "anotherPetName has no value" if it is `nil`; otherwise, print the _unwrapped_ value of `anotherPetName`. What do you expect to see in the console?
  */
 // write your code here
-
-
+//anotherPetName = "Buster"
+if anotherPetName != nil{
+    if let anotherPetName = anotherPetName{
+        print(anotherPetName)
+    }
+}else{
+    print("anotherPetName has no value")
+}
 
 
 
@@ -113,7 +118,11 @@ var anotherPetName: String?
  */
 // write your code here
 
+let testConstant: String?
+testConstant = "test"
+print(testConstant)
 
+//It prints the value of the constant with Optional(" ")
 
 
 
@@ -126,9 +135,10 @@ var anotherPetName: String?
  */
 // write your code here
 
+let testConstant2: String? = nil
+//testConstant2 = "test"
 
-
-
+//Cannot assign value for constants
 
 
 
